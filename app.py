@@ -14,7 +14,7 @@ app = Flask(__name__)
 app.secret_key = 'Hitesh'
 app.config.from_object(Config)
 # api = Api(app)
-api = Api(app, version='1.0', title='REST API Endpoints', description='Flask REST API Endpoints')
+api = Api(app, version='1.0', doc='/swagger', title='REST API Endpoints', description='Flask REST API Endpoints')
 # api.add_namespace(item)
 
 
