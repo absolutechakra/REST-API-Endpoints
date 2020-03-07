@@ -1,20 +1,20 @@
 from flask import Flask
-# from flask_restful import Api
-from flask_restplus import Api
+from flask_restful import Api
+# from flask_restplus import Api
 from flask_jwt import JWT
-from webapp.db import db
-from webapp.config import Config
-from webapp.resources.user import UserRegister
-from webapp.resources.item import Item, Items
-from webapp.resources.store import Store, StoreList
-from webapp.security import authenticate, idenity
+from db import db
+from config import Config
+from resources.user import UserRegister
+from resources.item import Item, Items
+from resources.store import Store, StoreList
+from security import authenticate, idenity
 
 
 app = Flask(__name__)
 app.secret_key = 'Hitesh'
 app.config.from_object(Config)
-# api = Api(app)
-api = Api(app, version='1.0', doc='/swagger', title='REST API Endpoints', description='Flask REST API Endpoints')
+api = Api(app)
+# api = Api(app, version='1.0', doc='/swagger', title='REST API Endpoints', description='Flask REST API Endpoints')
 # api.add_namespace(item)
 
 
@@ -33,5 +33,5 @@ api.add_resource(UserRegister, '/register')
 
 if __name__ == '__main__':
     db.init_app(app)
-    app.run(debug=True)
+    app.run(debug=True, host='0.0.0.0')
 

@@ -1,6 +1,6 @@
-from webapp.models.item import ItemModel
-# from flask_restful import Resource, reqparse
-from flask_restplus import Resource, reqparse, Namespace
+from models.item import ItemModel
+from flask_restful import Resource, reqparse
+# from flask_restplus import Resource, reqparse
 from flask_jwt import jwt_required
 
 

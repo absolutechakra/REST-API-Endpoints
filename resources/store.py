@@ -1,6 +1,6 @@
-# from flask_restful import Resource
-from flask_restplus import Resource
-from webapp.models.store import StoreModel
+from flask_restful import Resource
+# from flask_restplus import Resource
+from models.store import StoreModel
 
 
 class Store(Resource):

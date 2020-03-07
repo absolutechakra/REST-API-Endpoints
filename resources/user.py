@@ -1,6 +1,6 @@
-from webapp.models.user import UserModel
-# from flask_restful import Resource, reqparse
-from flask_restplus import Resource, reqparse
+from models.user import UserModel
+from flask_restful import Resource, reqparse
+# from flask_restplus import Resource, reqparse
 
 
 class UserRegister(Resource):
